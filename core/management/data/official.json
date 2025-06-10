@@ -1,0 +1,122 @@
+[
+    {
+        "key": "eat",
+        "number": 5,
+        "audio": "backend/audios/words/eat.mp3",
+        "sentences": [
+            {
+                "sentence": "I eat breakfast.",
+                "audio": "backend/audios/sentences/eat_sentence_1.mp3"
+            },
+            {
+                "sentence": "She likes to eat apples.",
+                "audio": "backend/audios/sentences/eat_sentence_2.mp3"
+            }
+        ]
+    },
+    {
+        "key": "run",
+        "number": 8,
+        "audio": "backend/audios/words/run.mp3",
+        "sentences": [
+            {
+                "sentence": "I run every morning.",
+                "audio": "backend/audios/sentences/run_sentence_1.mp3"
+            },
+            {
+                "sentence": "They run to school.",
+                "audio": "backend/audios/sentences/run_sentence_2.mp3"
+            }
+        ]
+    },
+    {
+        "key": "play",
+        "number": 6,
+        "audio": "backend/audios/words/play.mp3",
+        "sentences": [
+            {
+                "sentence": "We play soccer.",
+                "audio": "backend/audios/sentences/play_sentence_1.mp3"
+            },
+            {
+                "sentence": "I play with my dog.",
+                "audio": "backend/audios/sentences/play_sentence_2.mp3"
+            },
+            {
+                "sentence": "They play outside.",
+                "audio": "backend/audios/sentences/play_sentence_3.mp3"
+            }
+        ]
+    },
+    {
+        "key": "jump",
+        "number": 3,
+        "audio": "backend/audios/words/jump.mp3",
+        "sentences": [
+            {
+                "sentence": "The cat can jump high.",
+                "audio": "backend/audios/sentences/jump_sentence_1.mp3"
+            }
+        ]
+    },
+    {
+        "key": "read",
+        "number": 7,
+        "audio": "backend/audios/words/read.mp3",
+        "sentences": [
+            {
+                "sentence": "I read a book.",
+                "audio": "backend/audios/sentences/read_sentence_1.mp3"
+            },
+            {
+                "sentence": "She reads fast.",
+                "audio": "backend/audios/sentences/read_sentence_2.mp3"
+            }
+        ]
+    },
+    {
+        "key": "write",
+        "number": 4,
+        "audio": "backend/audios/words/write.mp3",
+        "sentences": [
+            {
+                "sentence": "I write letters.",
+                "audio": "backend/audios/sentences/write_sentence_1.mp3"
+            },
+            {
+                "sentence": "He writes stories.",
+                "audio": "backend/audios/sentences/write_sentence_2.mp3"
+            }
+        ]
+    },
+    {
+        "key": "walk",
+        "number": 2,
+        "audio": "backend/audios/words/walk.mp3",
+        "sentences": [
+            {
+                "sentence": "I walk to work.",
+                "audio": "backend/audios/sentences/walk_sentence_1.mp3"
+            },
+            {
+                "sentence": "We walk together.",
+                "audio": "backend/audios/sentences/walk_sentence_2.mp3"
+            }
+        ]
+    },
+    {
+        "key": "sleep",
+        "number": 9,
+        "audio": "backend/audios/words/sleep.mp3",
+        "sentences": [
+            {
+                "sentence": "I sleep at 10 PM.",
+                "audio": "backend/audios/sentences/sleep_sentence_1.mp3"
+            },
+            {
+                "sentence": "Babies sleep a lot.",
+                "audio": "backend/audios/sentences/sleep_sentence_2.mp3"
+            }
+        ]
+    }
+]

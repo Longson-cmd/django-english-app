@@ -1,0 +1,129 @@
+{
+    "self_introduce": [
+        "I'm a software developer working on web applications.",
+        "I enjoy reading novels, playing the guitar, and hiking.",
+        "On weekdays, I start my day with a short workout, then work from 9 to 5. In the evenings, I either cook, watch movies, or learn something new online.",
+        "i love going to campain"
+    ],
+
+
+    "default_introduction": [
+        {
+            "UserChoices": [
+                "Software Engineer"
+            ],
+            "introduction_phrace": "I am",
+            "key": "Job",
+            "options": [
+                "Software Engineer",
+                "Student",
+                "Accountant",
+                "Teacher",
+                "Doctor",
+                "Salesperson",
+                "Office Staff",
+                "Factory Worker"
+            ]
+        },
+        {
+            "UserChoices": [
+                "listening to music",
+                "reading novels",
+                "playing football",
+                "painting landscapes"
+            ],
+            "introduction_phrace": "I enjoy",
+            "key": "Hobby",
+            "options": [
+                "reading novels",
+                "playing football",
+                "painting landscapes",
+                "listening to music",
+                "cooking for my family"
+            ]
+        },
+        {
+            "UserChoices": [
+                "creative"
+            ],
+            "introduction_phrace": "People often describe me as",
+            "key": "Personality",
+            "options": [
+                "hardworking",
+                "friendly",
+                "curious",
+                "creative",
+                "reliable"
+            ]
+        },
+        {
+            "UserChoices": [
+                "travel the world",
+                "study abroad"
+            ],
+            "introduction_phrace": "In the future, I want to",
+            "key": "Future goal",
+            "options": [
+                "start my own business",
+                "travel the world",
+                "become a team leader",
+                "study abroad",
+                "work in a global company"
+            ]
+        },
+        {
+            "UserChoices": [
+                "solving problems",
+                "learning new things quickly"
+            ],
+            "introduction_phrace": "I am good at",
+            "key": "Excellent skills",
+            "options": [
+                "solving problems",
+                "communicating with people",
+                "managing time",
+                "learning new things quickly",
+                "using design tools like Figma"
+            ]
+        },
+        {
+            "UserChoices": [
+                "High School"
+            ],
+            "introduction_phrace": "I studied at",
+            "key": "Education",
+            "options": [
+                "High School",
+                "College",
+                "University",
+                "Master",
+                "PhD"
+            ]
+        }
+    ],
+
+
+    
+    "topics": {
+        "daily_conversation_topics": [
+            "weather",
+            "work or school",
+            "family",
+            "hobbies and interests",
+            "food and cooking",
+            "movies or TV shows",
+            "weekend plans",
+            "health and fitness",
+            "travel",
+            "news and current events"
+        ],
+        "userChoises": [
+            "movies or TV shows",
+            "weekend plans",
+            "health and fitness",
+            "family",
+            "hobbies and interests",
+            "food and cooking"
+        ]
+    }
+}
