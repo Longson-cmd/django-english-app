@@ -25,7 +25,7 @@ SECRET_KEY = "django-insecure-uye-vmgj-7b9xq00m(4@vn&h==o*thn3xw6t6=ol2=raaddef0
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -140,3 +140,9 @@ STATIC_URL = "static/"
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 CORS_ALLOW_ALL_ORIGINS = True
+
+import sys
+if 'runserver' in sys.argv and os.environ.get('RUN_MAIN') != 'true':
+    from pprint import pprint
+    print("\n[DATABASE CONFIG]")
+    pprint(DATABASES['default'])
