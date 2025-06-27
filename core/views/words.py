@@ -16,13 +16,14 @@ def add_words(request):
     if request.method =="POST":
         data = json.loads(request.body)
 
-        if Words.objects.filter(word_key = data['word']).exists() : 
+        if Words.objects.filter(word_key = data['word'], user = request.user).exists() : 
             word = Words.objects.get(word_key = data['word'])
             word.number += 1
             word.save()
             return JsonResponse({"message": f"add more number on {data['word']}"}, status = 201)
         else:
             word = Words.objects.create(
+                user = request.user,
                 word_key = data['word'],
                 number = 4,
                 notes = 'no notes',
@@ -39,9 +40,9 @@ def add_words(request):
 def delete_word(request):
     if request.method == 'DELETE':
         data = json.loads(request.body)
-
         try: 
-            w= Words.objects.get(word_key = data['word'])
+            w= Words.objects.get(user= request.user,word_key = data['word'])  
+
             audio_path = w.audio.replace("backend/", "")
             word_audio_path = os.path.join(settings.BASE_DIR, audio_path)
             print("Word audio path:", word_audio_path)
@@ -54,7 +55,9 @@ def delete_word(request):
                     os.remove(s_audio_path)
             w.delete()
             return JsonResponse({"message": "deleted word"})
-        except: 
+              
+        except Exception as e: 
+            print(f"Error: {e}")
             return JsonResponse({"message": 'there is an error'}, status = 405)
 
 
@@ -65,7 +68,8 @@ def add_notes(request):
         data = json.loads(request.body)
         word = data['word']
         notes = data['text']
-        w = Words.objects.get(word_key = word)
+        print("text: ", notes)
+        w = Words.objects.get(word_key = word, user = request.user)
         w.notes = notes
         w.save()
         return JsonResponse({"message": "added notes"})
@@ -76,8 +80,8 @@ def get_list_words(request):
     page_size = request.GET.get("size", 10)
 
 
-    words = Words.objects.all().order_by('-id')
-
+    words = Words.objects.filter(user = request.user).order_by('-id')
+    print(len(words))
     paginator = Paginator(words, page_size)
     page = paginator.page(currentPage)
 
@@ -95,8 +99,8 @@ def get_list_words(request):
             ]
         })
 
-    print(page_size)
-    print(page.has_next())
+    # print(page_size)
+    # print(page.has_next())
     return JsonResponse({
         "words": result,
         "has_next": page.has_next(),
@@ -106,7 +110,7 @@ def get_list_words(request):
 
 
 def get_words(request):
-    words = Words.objects.all()
+    words = Words.objects.filter(user = request.user)
 
     result = []
 

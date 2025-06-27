@@ -80,10 +80,10 @@ import os
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'railway',
+        'NAME': 'luck',
         'USER': 'root',
-        'PASSWORD': 'pFycyswIZCmENHXUhvmpqsDwbPWKHtLt',
-        'HOST': 'mysql.railway.internal',
+        'PASSWORD': 'Ssql1591002',
+        'HOST': 'localhost',
         'PORT': '3306',
     }
 }
@@ -141,7 +141,18 @@ STATIC_URL = "static/"
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
-CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:5173",  # ✅ Vue dev server
+]
+
+CSRF_TRUSTED_ORIGINS = [
+    "http://localhost:5173",
+]
+
+CORS_ALLOW_CREDENTIALS = True
+
+SESSION_COOKIE_SAMESITE = 'Lax'     # ✅ Cho phép cookie gửi trong request nội bộ
+SESSION_COOKIE_SECURE = False  
 
 import sys
 if 'runserver' in sys.argv and os.environ.get('RUN_MAIN') != 'true':

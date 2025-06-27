@@ -1,5 +1,5 @@
 from django.http import JsonResponse
-from core.models import Sentences, Words
+from core.models import Sentences, Words, CustomerProfile
 import json
 import os 
 from django.views.decorators.csrf import csrf_exempt
@@ -19,10 +19,15 @@ def add_sentences(request):
             return JsonResponse({"message": form.errors}, status= 400)
 
 
+        customer_profile = CustomerProfile.objects.get(user = request.user)
+        if customer_profile.is_paying_customer == False:
+            return JsonResponse({"message": "This is exclusive for paying users"}, status = 403)
+        
+        
         frontend_word = form.cleaned_data['word']
         frontend_sentence = form.cleaned_data['sentence']
 
-        word = Words.objects.get(word_key = frontend_word)
+        word = Words.objects.get(word_key = frontend_word, user = request.user)
         word.number -= 1
         word.save()
 
@@ -37,3 +42,4 @@ def add_sentences(request):
             tts.save(os.path.join(sentences_dir, safe_filename(frontend_sentence)))
 
         return JsonResponse({"message": "added sentence"}, status = 201)
+    return JsonResponse({"error": "Invalid request"}, status = 400)

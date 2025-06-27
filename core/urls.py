@@ -3,8 +3,12 @@ from core.views.sentences import add_sentences
 from core.views.self import  get_self, get_self_promt, update_self
 from core.views.words import add_words, get_words, delete_word, get_list_words, add_notes
 from core.views.audios import serve_audio
+from core.views.auth import resigter_user, login_user
 
 urlpatterns = [
+
+    path("api/register/", resigter_user, name = 'signup'),
+    path("login/", login_user, name = 'login'),
     path("list_words/", get_list_words, name = 'get_list_words'),
     path("words/", get_words, name = 'get_words'),
     path("words/add/", add_words, name = 'add_words'),

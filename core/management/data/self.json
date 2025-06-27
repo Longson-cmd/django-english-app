@@ -2,8 +2,7 @@
     "self_introduce": [
         "I'm a software developer working on web applications.",
         "I enjoy reading novels, playing the guitar, and hiking.",
-        "On weekdays, I start my day with a short workout, then work from 9 to 5. In the evenings, I either cook, watch movies, or learn something new online.",
-        "i love going to campain"
+        "On weekdays, I start my day with a short workout, then work from 9 to 5. In the evenings, I either cook, watch movies, or learn something new online."
     ],
 
 
@@ -117,7 +116,7 @@
             "travel",
             "news and current events"
         ],
-        "userChoises": [
+        "userChoices": [
             "movies or TV shows",
             "weekend plans",
             "health and fitness",
